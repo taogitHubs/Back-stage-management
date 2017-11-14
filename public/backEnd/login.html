@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>后台登录系统</title>
+    <link rel="stylesheet" href="./lib/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./lib/bootstrap-validator/css/bootstrapValidator.css">
+    <link rel="stylesheet" href="./lib/nprogress/nprogress.css">
+    <link rel="stylesheet" href="./css/admin.css">
+</head>
+<body class="lt-login">
+    <div class="row">
+        <div class="col-md-3 col-md-offset-4">
+            <div class="panel panel-primary">
+                <div class="panel-heading text-center">
+                    <h3 class="panel-title">后台登录界面</h3>
+                </div>
+                <div class="panel-body">
+                    <form class="form-horizontal" id="login-form">
+                        <div class="form-group">
+                            <label for="inputEmail3" class="col-sm-2 control-label">用户名</label>
+                            <div class="col-sm-10">
+                                <input type="text" class="form-control" id="inputEmail3" name="username" id="username" placeholder="请输入用户名">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="inputPassword3" class="col-sm-2 control-label">密码</label>
+                            <div class="col-sm-10">
+                                <input type="password" class="form-control" id="inputPassword3" name="password" id="password" placeholder="输入密码">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-sm-offset-2 col-sm-10">
+                                <button type="reset" class="btn btn-default">重置</button>
+                                <button type='submit' class="btn btn-primary pull-right">登录</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- 引入jquery -->
+    <script src="./lib/jquery/jquery.min.js"></script>
+    <!-- 引入bootstrap的插件 -->
+    <script src="./lib/bootstrap/js/bootstrap.min.js"></script>
+    <!-- 引入表单验证的插件 -->
+    <script src="./lib/bootstrap-validator/js/bootstrapValidator.min.js"></script>
+    <!-- 引入进度条插件 -->
+    <script src="./lib/nprogress/nprogress.js"></script>
+    <!-- 引入admin文件 -->
+    <script src="./js/admin.js"></script>
+    <!-- 引入index.js -->
+    <script src="./js/login.js"></script>
+</body>
+</html>

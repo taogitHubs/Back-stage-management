@@ -1,0 +1,131 @@
+html,
+body {
+  font-family: "微软雅黑";
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+ul {
+  list-style: none;
+}
+a:hover,
+a:active,
+a:focus {
+  text-decoration: none;
+}
+/* 左侧边栏 */
+.lt_aside {
+  width: 180px;
+  height: 100%;
+  background-color: #222d32;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: all 0.5s;
+}
+.lt_aside .brand {
+  width: 100%;
+  height: 50px;
+  background-color: #337ab7;
+  line-height: 50px;
+  text-align: center;
+}
+.lt_aside .brand a {
+  color: #fff;
+  font-size: 20px;
+  font-weight: bold;
+}
+.lt_aside .user {
+  width: 100%;
+  padding: 30px 20px;
+  box-sizing: border-box;
+}
+.lt_aside .user img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  vertical-align: middle;
+}
+.lt_aside .user span {
+  color: #fff;
+  font-size: 12px;
+}
+.lt_aside .menu {
+  width: 100%;
+}
+.lt_aside .menu ul {
+  width: 100%;
+  padding-left: 0;
+}
+.lt_aside .menu li {
+  width: 100%;
+  line-height: 40px;
+}
+.lt_aside .menu a {
+  display: block;
+  width: 100%;
+  color: #aaa;
+  font-size: 12px;
+  padding-left: 40px;
+  box-sizing: border-box;
+}
+.lt_aside .menu i {
+  margin-right: 5px;
+}
+.lt_aside .menu li > .fenlei {
+  display: none;
+}
+.lt_aside .menu li > .fenlei a {
+  padding-left: 50px;
+}
+.lt_aside .menu li.now > .fenlei {
+  display: block;
+}
+.lt_aside .menu .now {
+  color: #fff;
+}
+.lt_aside .menu li.now > a {
+  border-left-color: #3c8dbc;
+  background: #1d1f21;
+  color: #fff;
+}
+.main {
+  padding-left: 180px;
+  height: 100%;
+}
+.main .nav {
+  width: 100%;
+  height: 50px;
+  background-color: #3c8dbc;
+  line-height: 50px;
+  margin-bottom: 20px;
+}
+.main .nav a {
+  color: #fff;
+}
+.main .nav a:first-child {
+  float: left;
+  padding-left: 15px;
+  padding-top: 20px;
+}
+.main .nav a:last-child {
+  float: right;
+  padding-right: 15px;
+  padding-top: 20px;
+}
+.main .echarts {
+  width: 100%;
+}
+.main .echarts .picTable {
+  width: 50%;
+  height: 400px;
+  float: left;
+}
+.main.cc {
+  padding-left: 0;
+}
+/* login page */
+.lt-login {
+  background-color: #222d32;
+  padding-top: 150px;
+}
