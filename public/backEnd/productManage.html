@@ -22,6 +22,17 @@
         .container-fluid>a {
             margin-bottom: 20px;
         }
+
+        .fileupload {
+            position: relative;
+        }
+
+        .fileupload input {
+            position: absolute;
+            top: 0;
+            left: 0;
+            opacity: 0;
+        }
     </style>
 </head>
 
@@ -81,7 +92,7 @@
                 <li class="active">分类管理</li>
                 <li class="active">二级分类</li>
             </ol>
-            <a href="#secondModal" data-toggle="modal" class="btn btn-default">添加商品</a>
+            <a href="#proudctModal" data-toggle="modal" class="btn btn-default">添加商品</a>
             <table class="table table-bordered table-hover">
                 <thead>
                     <tr>
@@ -136,23 +147,75 @@
             </div>
         </div>
     </div>
-
+    <!-- 添加商品 -->
+    <div class="modal fade" id="proudctModal" tabindex="-1">
+        <div class="modal-dialog modal-sm" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                    <h4 class="modal-title" id="myModalLabel">添加商品</h4>
+                </div>
+                <div class="modal-body">
+                    <form id="productform">
+                        <div class="form-group">
+                            <label class="sr-only" for="proName"></label>
+                            <input type="text" class="form-control" name="proName" id="proName" placeholder="请输入商品名称">
+                        </div>
+                        <div class="form-group">
+                            <label class="sr-only" for="proDesc"></label>
+                            <textarea type="text" class="form-control" name="proDesc" id="proDesc" placeholder="请输入商品描述"></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label class="sr-only" for="proName"></label>
+                            <input type="text" class="form-control" name="num" id="num" placeholder="请输入商品库存">
+                        </div>
+                        <div class="form-group">
+                            <label class="sr-only" for="proName"></label>
+                            <input type="text" class="form-control" name="price" id="price" placeholder="请输入商品价格">
+                        </div>
+                        <div class="form-group">
+                            <label class="sr-only" for="proName"></label>
+                            <input type="text" class="form-control" name="oldPrice" id="oldPrice" placeholder="请输入商品原价">
+                        </div>
+                        <div class="form-group">
+                            <label class="sr-only" for="proName"></label>
+                            <input type="text" class="form-control" name="size" id="size" placeholder="请输入商品尺码">
+                        </div>
+                        <div class="form-group fileupload">
+                            <div style="margin-bottom: 20px">
+                                <label class="sr-only" for="pic"></label>
+                                <a href="javascript:;" class="btn btn-default">上传图片</a>
+                                <input type="file" class="form-control" name="pic1" id="pic">
+                                <span>提示： 必须上传三个图片</span>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="reset" form="productform" class="btn btn-default" data-dismiss="modal">取消</button>
+                    <button type="submit" form="productform" class="btn btn-primary">确认</button>
+                </div>
+            </div>
+        </div>
+    </div>
     <!-- 模板 -->
     <script type="text/template" id=productManage "">
-    <%for(var i=0;i<rows.length;i++){%>
-         <tr>
-            <td><%=(page-1)*size+i+1 %></td>
-            <td><%=rows[i].proName%></td>
-            <td><%=rows[i].proDesc%></td>
-            <td><%=rows[i].num%></td>
-            <td><%=rows[i].size%></td>
-            <td><%=rows[i].statu==1? '已上架': '未上架' %></td>
-            <td>
-                <a href="javascript:;" class="btn btn-sm btn-danger">下架</a>
-                <a href="javascript:;" class="btn btn-sm btn-primary">编辑</a>
-            </td>
-        </tr>
-    <%}%>
+        <%for(var i=0;i<rows.length;i++){%>
+            <tr>
+                <td><%=(page-1)*size+i+1 %></td>
+                <td><%=rows[i].proName%></td>
+                <td><%=rows[i].proDesc%></td>
+                <td><%=rows[i].num%></td>
+                <td><%=rows[i].size%></td>
+                <td><%=rows[i].statu==1? '已上架': '未上架' %></td>
+                <td>
+                    <a href="javascript:;" class="btn btn-sm btn-danger">下架</a>
+                    <a href="javascript:;" class="btn btn-sm btn-primary">编辑</a>
+                </td>
+            </tr>
+        <%}%>
     </script>
 
     <!-- 引入jquery -->
