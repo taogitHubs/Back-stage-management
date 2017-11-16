@@ -64,8 +64,8 @@
 
       <div class="search-result-order">
         <a href="">上架时间<i class="fa fa-angle-down"></i> </a>
-        <a href="">价格<i class="fa fa-angle-down"></i></a>
-        <a href="">销量<i class="fa fa-angle-down"></i></a>
+        <a href="javascript:;" id="jiage">价格<i class="fa fa-angle-down"></i></a>
+        <a href="javascript:;" id="xiaoliang">销量<i class="fa fa-angle-down"></i></a>
         <a href="">折扣<i class="fa fa-angle-down"></i></a>
       </div>
       <div class="search-result-list mui-clearfix">
@@ -119,12 +119,12 @@
   <script type="text/template" id="searchList-template">
     <%for(var i=0;i<data.length;i++){%>
       <div class="item-wrap">
-          <a class="item">
+          <a class="item" data-id='<%=data[i].id%>'>
             <img src="<%=data[i].pic[0].picAddr%>" alt="">
             <p><%=data[i].proName%></p>
             <div class="price">
               <span class="new">￥<%=data[i].price%></span>
-              <span class="old">￥<%=data[i].oldPrice%></span>
+              <span class="old">库存<%=data[i].num%></span>
             </div>
             <button>立即购买</button>
           </a>

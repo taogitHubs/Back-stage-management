@@ -104,8 +104,8 @@
 }
 
 .item-wrap .item  .price .old {
-  color: #999;
-  text-decoration: line-through;
+  color: rgb(64, 12, 235);
+  /* text-decoration: line-through; */
   margin-left: 5px;
 }
 

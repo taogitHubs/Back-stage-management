@@ -43,23 +43,31 @@
   </nav>
   <!-- 中间内容 -->
   <div class="mui-content lt-detail">
-   <!-- 轮播图 -->
+  
+  </div>
+  <!-- 模板 -->
+  <script type="text/template" id="detailtemplate">
+     <!-- 轮播图 -->
    <div class="mui-slider">
       <div class="mui-slider-group mui-slider-loop">
         <div class="mui-slider-item mui-slider-item-duplicate">
           <a href="#">
-            <img src="./images/detail.jpg" alt="">
+            <img src="<%=pic[0].picName%>" alt="">
           </a>
         </div>
         <div class="mui-slider-item">
           <a href="#">
-            <img src="./images/detail.jpg" alt="">
+            <img src="<%=pic[0].picName%>" alt="">
           </a>
         </div>
-
+        <div class="mui-slider-item">
+          <a href="#">
+            <img src="<%=pic[0].picName%>" alt="">
+          </a>
+        </div>
         <div class="mui-slider-item mui-slider-item-duplicate">
           <a href="#">
-            <img src="./images/detail.jpg" alt="">
+            <img src="<%=pic[0].picName%>" alt="">
           </a>
         </div>
       </div>
@@ -69,10 +77,10 @@
       </div>
     </div>
    <!-- 商品名称 -->
-   <p class="detail-name">Sport飓风 Nike Kwazi 休闲运动鞋男 844839-002-001-100-400</p>
+   <p class="detail-name"><%=proName%></p>
    <!-- 价格 -->
    <div class="detail-price">
-    <span>价格：</span><span class="new">￥499.1</span> <span class="old">￥888.1</span>
+    <span>价格：</span><span class="new">￥<%=price%></span> <span class="old">￥<%=oldPrice%></span>
    </div>
    <!-- 尺码 -->
    <div class="detail-size">
@@ -101,14 +109,15 @@
    <!-- 数量 -->
    <div class="detail-num">
     <span>数量:</span> <span>-</span><span>0</span><span>+</span>
-    <span>剩余20件</span>
+    <span>剩余<%=num%>件</span>
    </div>
-  </div>
+  </script>
   <script src="./lib/mui/js/mui.min.js"></script>
   <!-- 这是zepto里的核心模块之一在开发的时候可以一一进行引入 但是当项目上线之后 就需要合并所有模块 -->
   <script src="./lib/zepto/zepto.min.js"></script>
   <script src="./lib/artTemplate/template-native.js"></script>
   <script src="./js/common.js"></script>
+  <script src="./js/detail.js"></script>
 </body>
 
 </html>
